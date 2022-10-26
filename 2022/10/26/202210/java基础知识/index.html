@@ -18,21 +18,22 @@
   
     <meta name="description" content="深入了解一下JVM 1:什么是JVM1.1一次编译，到处执行jvm又称java 虚拟机。用来将java语言与操作系统交互的桥梁，jvm将java文件编译成class文件，class文件是二进制语言，可以被机器执行。不同的操作系统有不同的jvm , 在任何平台上执行的java代码会被解释成一致的class文件，实现了一次编译，到处执行。 2:什么是JMM2.1java内存模型jmm又叫java内存">
 <meta property="og:type" content="article">
-<meta property="og:title" content="飞鸽博客">
+<meta property="og:title" content="深入了解一下JVM">
 <meta property="og:url" content="http://example.com/2022/10/26/202210/java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.html">
 <meta property="og:site_name" content="飞鸽博客">
 <meta property="og:description" content="深入了解一下JVM 1:什么是JVM1.1一次编译，到处执行jvm又称java 虚拟机。用来将java语言与操作系统交互的桥梁，jvm将java文件编译成class文件，class文件是二进制语言，可以被机器执行。不同的操作系统有不同的jvm , 在任何平台上执行的java代码会被解释成一致的class文件，实现了一次编译，到处执行。 2:什么是JMM2.1java内存模型jmm又叫java内存">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://pic1.imgdb.cn/item/6359356c16f2c2beb1a7961a.png">
-<meta property="article:published_time" content="2022-10-26T11:56:53.331Z">
-<meta property="article:modified_time" content="2022-10-26T13:24:36.996Z">
+<meta property="article:published_time" content="2022-10-26T13:51:38.000Z">
+<meta property="article:modified_time" content="2022-10-26T14:38:36.441Z">
 <meta property="article:author" content="飞哥">
+<meta property="article:tag" content="jvm">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://pic1.imgdb.cn/item/6359356c16f2c2beb1a7961a.png">
   
   
   
-  <title>飞鸽博客</title>
+  <title>深入了解一下JVM - 飞鸽博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,13 +204,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('/img/bg.png') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="深入了解一下JVM"></span>
           
         </div>
 
@@ -220,7 +221,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-10-26 19:56" pubdate>
+        <time datetime="2022-10-26 21:51" pubdate>
           2022年10月26日 晚上
         </time>
       </span>
@@ -281,7 +282,7 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none"></h1>
+            <h1 style="display: none">深入了解一下JVM</h1>
             
             
               <div class="markdown-body">
@@ -299,6 +300,34 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/java%E5%9F%BA%E7%A1%80/" class="category-chain-item">java基础</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/jvm/">#jvm</a>
+      
+    </div>
   
 </div>
 
@@ -308,7 +337,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
+      <div>深入了解一下JVM</div>
       <div>http://example.com/2022/10/26/202210/java基础知识/</div>
     </div>
     <div class="license-meta">
@@ -357,8 +386,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/10/26/202210/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" title="">
-                        <span class="hidden-mobile"></span>
+                      <a href="/2022/10/25/%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/" title="基本配置">
+                        <span class="hidden-mobile">基本配置</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -371,24 +400,15 @@
             
   <article id="comments" lazyload>
     
-  <div class="disqus" style="width:100%">
-    <div id="disqus_thread"></div>
-    
-      <script type="text/javascript">
-        var disqus_config = function() {
-          this.page.url = 'http://example.com/2022/10/26/202210/java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/';
-          this.page.identifier = '/2022/10/26/202210/java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/';
-        };
-        Fluid.utils.loadComments('#disqus_thread', function() {
-          var d = document, s = d.createElement('script');
-          s.src = '//' + 'fluid' + '.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', new Date());
-          (d.head || d.body).appendChild(s);
-        });
-      </script>
-    
-    <noscript>Please enable JavaScript to view the comments</noscript>
-  </div>
+  <div id="SOHUCS" sid='http://example.com/2022/10/26/202210/java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/'></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#SOHUCS', function() {
+      Fluid.utils.createScript("https://changyan.sohu.com/upload/changyan.js", function() {
+        window.changyan.api.config({"appid":"cywltsbBP","appkey":"e87d7c4fb32c09082d9d36d7fa8c4ad4"})
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
 
 
   </article>
