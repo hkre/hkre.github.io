@@ -5,6 +5,32 @@
   
   <entry>
     <title></title>
+    <link href="/2022/10/26/202210/java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    <url>/2022/10/26/202210/java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
+    
+    <content type="html"><![CDATA[<blockquote><h1 id="深入了解一下JVM"><a href="#深入了解一下JVM" class="headerlink" title="深入了解一下JVM"></a>深入了解一下JVM</h1></blockquote><h2 id="1-什么是JVM"><a href="#1-什么是JVM" class="headerlink" title="1:什么是JVM"></a>1:什么是JVM</h2><h3 id="1-1一次编译，到处执行"><a href="#1-1一次编译，到处执行" class="headerlink" title="1.1一次编译，到处执行"></a>1.1一次编译，到处执行</h3><p><em>jvm又称java 虚拟机。用来将java语言与操作系统交互的桥梁，jvm将java文件编译成class文件，class文件是二进制语言，可以被机器执行。不同的操作系统有不同的jvm , 在任何平台上执行的java代码会被解释成一致的class文件，实现了一次编译，到处执行。</em></p><h2 id="2-什么是JMM"><a href="#2-什么是JMM" class="headerlink" title="2:什么是JMM"></a>2:什么是JMM</h2><h3 id="2-1java内存模型"><a href="#2-1java内存模型" class="headerlink" title="2.1java内存模型"></a>2.1java内存模型</h3><p>jmm又叫java内存模型。如图所示</p><p><img src="https://pic1.imgdb.cn/item/6359356c16f2c2beb1a7961a.png"></p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2022/10/26/202210/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    <url>/2022/10/26/202210/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/</url>
+    
+    <content type="html"><![CDATA[<h1 id="2022-010-26-线程与进程的区别"><a href="#2022-010-26-线程与进程的区别" class="headerlink" title="2022-010-26  线程与进程的区别"></a>2022-010-26  线程与进程的区别</h1><h2 id="1-线程与进程"><a href="#1-线程与进程" class="headerlink" title="1:线程与进程"></a>1:线程与进程</h2><hr><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <br></code></pre></td></tr></table></figure><h6 id="qdd"><a href="#qdd" class="headerlink" title="qdd"></a>qdd</h6><p><img src="https://pic1.imgdb.cn/item/6357edf116f2c2beb1f5f4a7.jpg"></p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure><h4 id="ddddfdf"><a href="#ddddfdf" class="headerlink" title="ddddfdf"></a>ddddfdf</h4><table><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table><p><code>eeeeee</code></p><h4 id="q2ew12q323"><a href="#q2ew12q323" class="headerlink" title="q2ew12q323"></a>q2ew12q323</h4><p>21212</p><p>&#96;&#96;</p><blockquote><p>wqwq1w12122</p></blockquote><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">hhh</span><br><span class="hljs-attribute"></span><br><span class="hljs-attribute">fefwefe</span><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
     <link href="/2022/10/25/%E3%80%8A%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%97%A5%E8%AE%B0%E3%80%8B/"/>
     <url>/2022/10/25/%E3%80%8A%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%97%A5%E8%AE%B0%E3%80%8B/</url>
     
