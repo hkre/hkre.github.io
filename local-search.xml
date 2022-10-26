@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>并发与并行</title>
+    <link href="/2022/10/27/202210/%E5%B9%B6%E5%8F%91%E4%B8%8E%E5%B9%B6%E8%A1%8C/"/>
+    <url>/2022/10/27/202210/%E5%B9%B6%E5%8F%91%E4%B8%8E%E5%B9%B6%E8%A1%8C/</url>
+    
+    <content type="html"><![CDATA[<blockquote><h1 id="并发与并行"><a href="#并发与并行" class="headerlink" title="并发与并行"></a>并发与并行</h1></blockquote><h1 id="1-并发"><a href="#1-并发" class="headerlink" title="1:并发"></a>1:并发</h1><h2 id="1-1上下文切换"><a href="#1-1上下文切换" class="headerlink" title="1.1上下文切换"></a>1.1上下文切换</h2><p><em>cpu通过时间片来切换线程循环执行任务，jvm中的PC寄存器会记录上个线程执行的行数，以便下次从执行到的行数继续往下执行。</em></p><h4 id="1-1-1-减少上下文切换的开销"><a href="#1-1-1-减少上下文切换的开销" class="headerlink" title="1.1.1 减少上下文切换的开销"></a>1.1.1 减少上下文切换的开销</h4><ul><li><input disabled type="checkbox"> <em>无锁并发编程，数据的id安装Hash算法取模分段，不同线程处理不同段的数据</em></li><li><input disabled type="checkbox"> <em>CAS</em></li><li><input disabled type="checkbox"> <em>使用最少线程，干最多的事情，创建线程合理，避免大量线程处于等待状态</em></li><li><input disabled type="checkbox"> <em>协程</em></li></ul><h2 id="1-2：死锁"><a href="#1-2：死锁" class="headerlink" title="1.2：死锁"></a>1.2：死锁</h2><p><em>死锁是指两个线程执行过程中相关占用双方所需要的资源，导致两个线程都阻塞等待</em></p><h3 id="1-2-1-如何避免死锁"><a href="#1-2-1-如何避免死锁" class="headerlink" title="1.2.1:如何避免死锁"></a>1.2.1:如何避免死锁</h3><ul><li><p><input disabled type="checkbox"> <em>避免一个线程同时获多个锁</em></p></li><li><p><input disabled type="checkbox"> <em>避免一个线程在锁内占用多个资源，尽量保证每个锁只占用一个资源</em></p></li><li><p><input disabled type="checkbox"> <em>尝试使用定时锁，使用lock tryLock(timeout)来代替内部锁机制</em></p></li><li><p><input disabled type="checkbox"> <em>对于数据库锁，加锁与解锁必须在一个数据库连接里，否则会出现解锁失败的情况</em></p></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>多线程</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>多线程</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>深入了解一下JVM</title>
     <link href="/2022/10/26/202210/java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     <url>/2022/10/26/202210/java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>

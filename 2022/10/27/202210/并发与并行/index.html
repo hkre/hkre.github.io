@@ -16,24 +16,22 @@
   <meta name="author" content="飞哥">
   <meta name="keywords" content="">
   
-    <meta name="description" content="深入了解一下JVM 1:什么是JVM1.1一次编译，到处执行jvm又称java 虚拟机。用来将java语言与操作系统交互的桥梁，jvm将java文件编译成class文件，class文件是二进制语言，可以被机器执行。不同的操作系统有不同的jvm , 在任何平台上执行的java代码会被解释成一致的class文件，实现了一次编译，到处执行。 2:什么是JMM2.1java内存模型jmm又叫java内存">
+    <meta name="description" content="并发与并行 1:并发1.1上下文切换cpu通过时间片来切换线程循环执行任务，jvm中的PC寄存器会记录上个线程执行的行数，以便下次从执行到的行数继续往下执行。 1.1.1 减少上下文切换的开销  无锁并发编程，数据的id安装Hash算法取模分段，不同线程处理不同段的数据  CAS  使用最少线程，干最多的事情，创建线程合理，避免大量线程处于等待状态  协程  1.2：死锁死锁是指两个线程执行过程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="深入了解一下JVM">
-<meta property="og:url" content="http://example.com/2022/10/26/202210/java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.html">
+<meta property="og:title" content="并发与并行">
+<meta property="og:url" content="http://example.com/2022/10/27/202210/%E5%B9%B6%E5%8F%91%E4%B8%8E%E5%B9%B6%E8%A1%8C/index.html">
 <meta property="og:site_name" content="飞鸽博客">
-<meta property="og:description" content="深入了解一下JVM 1:什么是JVM1.1一次编译，到处执行jvm又称java 虚拟机。用来将java语言与操作系统交互的桥梁，jvm将java文件编译成class文件，class文件是二进制语言，可以被机器执行。不同的操作系统有不同的jvm , 在任何平台上执行的java代码会被解释成一致的class文件，实现了一次编译，到处执行。 2:什么是JMM2.1java内存模型jmm又叫java内存">
+<meta property="og:description" content="并发与并行 1:并发1.1上下文切换cpu通过时间片来切换线程循环执行任务，jvm中的PC寄存器会记录上个线程执行的行数，以便下次从执行到的行数继续往下执行。 1.1.1 减少上下文切换的开销  无锁并发编程，数据的id安装Hash算法取模分段，不同线程处理不同段的数据  CAS  使用最少线程，干最多的事情，创建线程合理，避免大量线程处于等待状态  协程  1.2：死锁死锁是指两个线程执行过程">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://pic1.imgdb.cn/item/6359356c16f2c2beb1a7961a.png">
-<meta property="article:published_time" content="2022-10-26T13:51:38.000Z">
-<meta property="article:modified_time" content="2022-10-26T14:38:36.441Z">
+<meta property="article:published_time" content="2022-10-26T22:38:38.000Z">
+<meta property="article:modified_time" content="2022-10-26T23:19:16.770Z">
 <meta property="article:author" content="飞哥">
-<meta property="article:tag" content="jvm">
+<meta property="article:tag" content="多线程">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://pic1.imgdb.cn/item/6359356c16f2c2beb1a7961a.png">
   
   
   
-  <title>深入了解一下JVM - 飞鸽博客</title>
+  <title>并发与并行 - 飞鸽博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -210,7 +208,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="深入了解一下JVM"></span>
+            <span id="subtitle" data-typed-text="并发与并行"></span>
           
         </div>
 
@@ -221,8 +219,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-10-26 21:51" pubdate>
-          2022年10月26日 晚上
+        <time datetime="2022-10-27 06:38" pubdate>
+          2022年10月27日 早上
         </time>
       </span>
     
@@ -233,7 +231,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          201 字
+          339 字
         
       </span>
     
@@ -244,7 +242,7 @@
         
         
         
-          2 分钟
+          3 分钟
         
       </span>
     
@@ -282,16 +280,35 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">深入了解一下JVM</h1>
+            <h1 style="display: none">并发与并行</h1>
             
             
               <div class="markdown-body">
                 
                 <blockquote>
-<h1 id="深入了解一下JVM"><a href="#深入了解一下JVM" class="headerlink" title="深入了解一下JVM"></a>深入了解一下JVM</h1></blockquote>
-<h2 id="1-什么是JVM"><a href="#1-什么是JVM" class="headerlink" title="1:什么是JVM"></a>1:什么是JVM</h2><h3 id="1-1一次编译，到处执行"><a href="#1-1一次编译，到处执行" class="headerlink" title="1.1一次编译，到处执行"></a>1.1一次编译，到处执行</h3><p><em>jvm又称java 虚拟机。用来将java语言与操作系统交互的桥梁，jvm将java文件编译成class文件，class文件是二进制语言，可以被机器执行。不同的操作系统有不同的jvm , 在任何平台上执行的java代码会被解释成一致的class文件，实现了一次编译，到处执行。</em></p>
-<h2 id="2-什么是JMM"><a href="#2-什么是JMM" class="headerlink" title="2:什么是JMM"></a>2:什么是JMM</h2><h3 id="2-1java内存模型"><a href="#2-1java内存模型" class="headerlink" title="2.1java内存模型"></a>2.1java内存模型</h3><p>jmm又叫java内存模型。如图所示</p>
-<p><img src="https://pic1.imgdb.cn/item/6359356c16f2c2beb1a7961a.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="并发与并行"><a href="#并发与并行" class="headerlink" title="并发与并行"></a>并发与并行</h1></blockquote>
+<h1 id="1-并发"><a href="#1-并发" class="headerlink" title="1:并发"></a>1:并发</h1><h2 id="1-1上下文切换"><a href="#1-1上下文切换" class="headerlink" title="1.1上下文切换"></a>1.1上下文切换</h2><p><em>cpu通过时间片来切换线程循环执行任务，jvm中的PC寄存器会记录上个线程执行的行数，以便下次从执行到的行数继续往下执行。</em></p>
+<h4 id="1-1-1-减少上下文切换的开销"><a href="#1-1-1-减少上下文切换的开销" class="headerlink" title="1.1.1 减少上下文切换的开销"></a>1.1.1 减少上下文切换的开销</h4><ul>
+<li><input disabled type="checkbox"> <em>无锁并发编程，数据的id安装Hash算法取模分段，不同线程处理不同段的数据</em></li>
+<li><input disabled type="checkbox"> <em>CAS</em></li>
+<li><input disabled type="checkbox"> <em>使用最少线程，干最多的事情，创建线程合理，避免大量线程处于等待状态</em></li>
+<li><input disabled type="checkbox"> <em>协程</em></li>
+</ul>
+<h2 id="1-2：死锁"><a href="#1-2：死锁" class="headerlink" title="1.2：死锁"></a>1.2：死锁</h2><p><em>死锁是指两个线程执行过程中相关占用双方所需要的资源，导致两个线程都阻塞等待</em></p>
+<h3 id="1-2-1-如何避免死锁"><a href="#1-2-1-如何避免死锁" class="headerlink" title="1.2.1:如何避免死锁"></a>1.2.1:如何避免死锁</h3><ul>
+<li><p><input disabled type="checkbox"> 
+<em>避免一个线程同时获多个锁</em></p>
+</li>
+<li><p><input disabled type="checkbox"> 
+<em>避免一个线程在锁内占用多个资源，尽量保证每个锁只占用一个资源</em></p>
+</li>
+<li><p><input disabled type="checkbox"> 
+<em>尝试使用定时锁，使用lock tryLock(timeout)来代替内部锁机制</em></p>
+</li>
+<li><p><input disabled type="checkbox"> 
+<em>对于数据库锁，加锁与解锁必须在一个数据库连接里，否则会出现解锁失败的情况</em></p>
+</li>
+</ul>
 
                 
               </div>
@@ -310,7 +327,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/java%E5%9F%BA%E7%A1%80/" class="category-chain-item">java基础</a>
+  <a href="/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="category-chain-item">多线程</a>
   
   
 
@@ -325,7 +342,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/jvm/">#jvm</a>
+        <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">#多线程</a>
       
     </div>
   
@@ -337,8 +354,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>深入了解一下JVM</div>
-      <div>http://example.com/2022/10/26/202210/java基础知识/</div>
+      <div>并发与并行</div>
+      <div>http://example.com/2022/10/27/202210/并发与并行/</div>
     </div>
     <div class="license-meta">
       
@@ -350,7 +367,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年10月26日</div>
+          <div>2022年10月27日</div>
         </div>
       
       
@@ -382,18 +399,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/10/27/202210/%E5%B9%B6%E5%8F%91%E4%B8%8E%E5%B9%B6%E8%A1%8C/" title="并发与并行">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">并发与并行</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/10/25/%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/" title="基本配置">
-                        <span class="hidden-mobile">基本配置</span>
+                      <a href="/2022/10/26/202210/java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" title="深入了解一下JVM">
+                        <span class="hidden-mobile">深入了解一下JVM</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -406,7 +417,7 @@
             
   <article id="comments" lazyload>
     
-  <div id="SOHUCS" sid='http://example.com/2022/10/26/202210/java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/'></div>
+  <div id="SOHUCS" sid='http://example.com/2022/10/27/202210/%E5%B9%B6%E5%8F%91%E4%B8%8E%E5%B9%B6%E8%A1%8C/'></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#SOHUCS', function() {
       Fluid.utils.createScript("https://changyan.sohu.com/upload/changyan.js", function() {
