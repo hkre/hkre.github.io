@@ -16,24 +16,22 @@
   <meta name="author" content="飞哥">
   <meta name="keywords" content="">
   
-    <meta name="description" content="深入了解一下JVM 1:什么是JVM1.1一次编译，到处执行jvm又称java 虚拟机。用来将java语言与操作系统交互的桥梁，jvm将java文件编译成class文件，class文件是二进制语言，可以被机器执行。不同的操作系统有不同的jvm , 在任何平台上执行的java代码会被解释成一致的class文件，实现了一次编译，到处执行。 2:什么是JMM2.1java内存模型jmm又叫java内存">
+    <meta name="description" content="synchronized 1:synchronized的定义1.1synchronized的使用形式1.1.1三种使用形式  普通同步方法，锁的是当前实例对象  静态同步方法,  锁的是当前类的Class对象  同步代码块，锁的是synchronized括号   synchronized 同步语句块的实现使用的是 monitorenter 和 monitorexit 指令，其中 monitore">
 <meta property="og:type" content="article">
-<meta property="og:title" content="深入了解一下JVM">
-<meta property="og:url" content="http://example.com/2022/10/26/202210/java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.html">
+<meta property="og:title" content="synchronized">
+<meta property="og:url" content="http://example.com/2022/10/28/202210/synchronized/index.html">
 <meta property="og:site_name" content="飞鸽博客">
-<meta property="og:description" content="深入了解一下JVM 1:什么是JVM1.1一次编译，到处执行jvm又称java 虚拟机。用来将java语言与操作系统交互的桥梁，jvm将java文件编译成class文件，class文件是二进制语言，可以被机器执行。不同的操作系统有不同的jvm , 在任何平台上执行的java代码会被解释成一致的class文件，实现了一次编译，到处执行。 2:什么是JMM2.1java内存模型jmm又叫java内存">
+<meta property="og:description" content="synchronized 1:synchronized的定义1.1synchronized的使用形式1.1.1三种使用形式  普通同步方法，锁的是当前实例对象  静态同步方法,  锁的是当前类的Class对象  同步代码块，锁的是synchronized括号   synchronized 同步语句块的实现使用的是 monitorenter 和 monitorexit 指令，其中 monitore">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://pic1.imgdb.cn/item/6359356c16f2c2beb1a7961a.png">
-<meta property="article:published_time" content="2022-10-26T13:51:38.000Z">
-<meta property="article:modified_time" content="2022-10-27T23:16:04.201Z">
+<meta property="article:published_time" content="2022-10-27T23:13:38.000Z">
+<meta property="article:modified_time" content="2022-10-27T23:31:10.686Z">
 <meta property="article:author" content="飞哥">
-<meta property="article:tag" content="jvm">
+<meta property="article:tag" content="synchronized">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://pic1.imgdb.cn/item/6359356c16f2c2beb1a7961a.png">
   
   
   
-  <title>深入了解一下JVM - 飞鸽博客</title>
+  <title>synchronized - 飞鸽博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -210,7 +208,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="深入了解一下JVM"></span>
+            <span id="subtitle" data-typed-text="synchronized"></span>
           
         </div>
 
@@ -221,8 +219,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-10-26 21:51" pubdate>
-          2022年10月26日 晚上
+        <time datetime="2022-10-28 07:13" pubdate>
+          2022年10月28日 早上
         </time>
       </span>
     
@@ -233,7 +231,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          269 字
+          346 字
         
       </span>
     
@@ -282,20 +280,22 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">深入了解一下JVM</h1>
+            <h1 style="display: none">synchronized</h1>
             
             
               <div class="markdown-body">
                 
                 <blockquote>
-<h1 id="深入了解一下JVM"><a href="#深入了解一下JVM" class="headerlink" title="深入了解一下JVM"></a>深入了解一下JVM</h1></blockquote>
-<h2 id="1-什么是JVM"><a href="#1-什么是JVM" class="headerlink" title="1:什么是JVM"></a>1:什么是JVM</h2><h3 id="1-1一次编译，到处执行"><a href="#1-1一次编译，到处执行" class="headerlink" title="1.1一次编译，到处执行"></a>1.1一次编译，到处执行</h3><p><em>jvm又称java 虚拟机。用来将java语言与操作系统交互的桥梁，jvm将java文件编译成class文件，class文件是二进制语言，可以被机器执行。不同的操作系统有不同的jvm , 在任何平台上执行的java代码会被解释成一致的class文件，实现了一次编译，到处执行。</em></p>
-<h2 id="2-什么是JMM"><a href="#2-什么是JMM" class="headerlink" title="2:什么是JMM"></a>2:什么是JMM</h2><h3 id="2-1java内存模型"><a href="#2-1java内存模型" class="headerlink" title="2.1java内存模型"></a>2.1java内存模型</h3><p>jmm又叫java内存模型。如图所示</p>
-<p><img src="https://pic1.imgdb.cn/item/6359356c16f2c2beb1a7961a.png" srcset="/img/loading.gif" lazyload></p>
-<h3 id="2-2volatile"><a href="#2-2volatile" class="headerlink" title="2.2volatile"></a>2.2volatile</h3><blockquote>
-<ul>
-<li>volatile的底层原理其实就是通过lock信号和MESI协议通知所有的处理器缓存失效，并且把数据更新到了内存。</li>
+<h1 id="synchronized"><a href="#synchronized" class="headerlink" title="synchronized"></a>synchronized</h1></blockquote>
+<h1 id="1-synchronized的定义"><a href="#1-synchronized的定义" class="headerlink" title="1:synchronized的定义"></a>1:synchronized的定义</h1><h2 id="1-1synchronized的使用形式"><a href="#1-1synchronized的使用形式" class="headerlink" title="1.1synchronized的使用形式"></a>1.1synchronized的使用形式</h2><h3 id="1-1-1三种使用形式"><a href="#1-1-1三种使用形式" class="headerlink" title="1.1.1三种使用形式"></a>1.1.1三种使用形式</h3><ul>
+<li><input disabled type="checkbox"> 普通同步方法，锁的是当前实例对象</li>
+<li><input disabled type="checkbox"> 静态同步方法,  锁的是当前类的Class对象</li>
+<li><input disabled type="checkbox"> 同步代码块，锁的是synchronized括号</li>
 </ul>
+<blockquote>
+<p><code>synchronized</code> 同步语句块的实现使用的是 <code>monitorenter</code> 和 <code>monitorexit</code> 指令，其中 <code>monitorenter</code> 指令指向同步代码块的开始位置，<code>monitorexit</code> 指令则指明同步代码块的结束位置。</p>
+<p><code>synchronized</code> 修饰的方法并没有 <code>monitorenter</code> 指令和 <code>monitorexit</code> 指令，取得代之的确实是 <code>ACC_SYNCHRONIZED</code> 标识，该标识指明了该方法是一个同步方法。</p>
+<p><strong>不过两者的本质都是对对象监视器 monitor 的获取。</strong></p>
 </blockquote>
 
                 
@@ -315,7 +315,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/java%E5%9F%BA%E7%A1%80/" class="category-chain-item">java基础</a>
+  <a href="/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="category-chain-item">多线程</a>
   
   
 
@@ -330,7 +330,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/jvm/">#jvm</a>
+        <a href="/tags/synchronized/">#synchronized</a>
       
     </div>
   
@@ -342,8 +342,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>深入了解一下JVM</div>
-      <div>http://example.com/2022/10/26/202210/java基础知识/</div>
+      <div>synchronized</div>
+      <div>http://example.com/2022/10/28/202210/synchronized/</div>
     </div>
     <div class="license-meta">
       
@@ -355,7 +355,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年10月26日</div>
+          <div>2022年10月28日</div>
         </div>
       
       
@@ -387,18 +387,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/10/27/202210/%E5%B9%B6%E5%8F%91%E4%B8%8E%E5%B9%B6%E8%A1%8C/" title="并发与并行">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">并发与并行</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/10/25/%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/" title="基本配置">
-                        <span class="hidden-mobile">基本配置</span>
+                      <a href="/2022/10/27/202210/%E5%B9%B6%E5%8F%91%E4%B8%8E%E5%B9%B6%E8%A1%8C/" title="并发与并行">
+                        <span class="hidden-mobile">并发与并行</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -411,7 +405,7 @@
             
   <article id="comments" lazyload>
     
-  <div id="SOHUCS" sid='http://example.com/2022/10/26/202210/java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/'></div>
+  <div id="SOHUCS" sid='http://example.com/2022/10/28/202210/synchronized/'></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#SOHUCS', function() {
       Fluid.utils.createScript("https://changyan.sohu.com/upload/changyan.js", function() {
