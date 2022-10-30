@@ -4,13 +4,25 @@
   
   
   <entry>
-    <title></title>
+    <title>生产者和消费者</title>
     <link href="/2022/10/30/202210/%E7%94%9F%E4%BA%A7%E8%80%85%E5%92%8C%E6%B6%88%E8%B4%B9%E8%80%85/"/>
     <url>/2022/10/30/202210/%E7%94%9F%E4%BA%A7%E8%80%85%E5%92%8C%E6%B6%88%E8%B4%B9%E8%80%85/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<blockquote><h1 id="生产者和消费者"><a href="#生产者和消费者" class="headerlink" title="生产者和消费者"></a>生产者和消费者</h1></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs java"><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br><br>    <span class="hljs-comment">//定义消费者和生产者</span><br><br>    <span class="hljs-type">Integer</span> <span class="hljs-variable">num</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span> ; i &lt; <span class="hljs-number">2</span> ; i++) &#123;<br>        <span class="hljs-keyword">final</span> <span class="hljs-type">int</span> <span class="hljs-variable">temp</span> <span class="hljs-operator">=</span> num;<br>        <span class="hljs-keyword">new</span> <span class="hljs-title class_">Thread</span>(()-&gt;&#123;<br><br>            <span class="hljs-comment">//定义标志位</span><br>            <span class="hljs-keyword">while</span> (temp != <span class="hljs-number">0</span>)&#123;<br><br>            &#125;<br>            System.out.println(Thread.currentThread().getName()+<span class="hljs-string">&quot;\t开始生产还剩&quot;</span>+temp+<span class="hljs-number">1</span>+<span class="hljs-string">&quot;块&quot;</span>);<br><br><br>        &#125;,String.valueOf(i)).start();<br>    &#125;<br><br><br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span> ; i &lt; <span class="hljs-number">2</span> ; i++) &#123;<br>        <span class="hljs-keyword">new</span> <span class="hljs-title class_">Thread</span>(()-&gt;&#123;<br><br>        &#125;,String.valueOf(i)).start();<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
     
     
+    <categories>
+      
+      <category>消息中间件</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>多线程</tag>
+      
+    </tags>
     
   </entry>
   
