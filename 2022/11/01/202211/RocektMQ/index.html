@@ -16,22 +16,22 @@
   <meta name="author" content="飞哥">
   <meta name="keywords" content="">
   
-    <meta name="description" content="生产者和消费者 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889 class Cake &amp;#123;">
+    <meta name="description" content="RocektMq 1:架构1.1消费端与客户端1.2消息代理Boker1.3NameServer">
 <meta property="og:type" content="article">
-<meta property="og:title" content="生产者和消费者">
-<meta property="og:url" content="http://example.com/2022/10/30/202210/%E7%94%9F%E4%BA%A7%E8%80%85%E5%92%8C%E6%B6%88%E8%B4%B9%E8%80%85/index.html">
+<meta property="og:title" content="rocektMq">
+<meta property="og:url" content="http://example.com/2022/11/01/202211/RocektMQ/index.html">
 <meta property="og:site_name" content="飞鸽博客">
-<meta property="og:description" content="生产者和消费者 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889 class Cake &amp;#123;">
+<meta property="og:description" content="RocektMq 1:架构1.1消费端与客户端1.2消息代理Boker1.3NameServer">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-10-30T14:00:38.000Z">
-<meta property="article:modified_time" content="2022-10-31T22:53:02.746Z">
+<meta property="article:published_time" content="2022-10-31T22:38:38.000Z">
+<meta property="article:modified_time" content="2022-10-31T23:07:14.118Z">
 <meta property="article:author" content="飞哥">
-<meta property="article:tag" content="多线程">
+<meta property="article:tag" content="rocektMq">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>生产者和消费者 - 飞鸽博客</title>
+  <title>rocektMq - 飞鸽博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -208,7 +208,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="生产者和消费者"></span>
+            <span id="subtitle" data-typed-text="rocektMq"></span>
           
         </div>
 
@@ -219,8 +219,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-10-30 22:00" pubdate>
-          2022年10月30日 晚上
+        <time datetime="2022-11-01 06:38" pubdate>
+          2022年11月1日 早上
         </time>
       </span>
     
@@ -231,7 +231,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.6k 字
+          47 字
         
       </span>
     
@@ -242,7 +242,7 @@
         
         
         
-          14 分钟
+          1 分钟
         
       </span>
     
@@ -280,16 +280,14 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">生产者和消费者</h1>
+            <h1 style="display: none">rocektMq</h1>
             
             
               <div class="markdown-body">
                 
                 <blockquote>
-<h1 id="生产者和消费者"><a href="#生产者和消费者" class="headerlink" title="生产者和消费者"></a>生产者和消费者</h1></blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><code class="hljs java"><br> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Cake</span> &#123;<br>    <span class="hljs-comment">//蛋糕数量</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-type">Integer</span> <span class="hljs-variable">num</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>    <span class="hljs-type">Lock</span> <span class="hljs-variable">lock</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ReentrantLock</span>();<br>    <span class="hljs-type">Condition</span> <span class="hljs-variable">condition</span> <span class="hljs-operator">=</span> lock.newCondition();<br><br><br>    <span class="hljs-comment">//吃蛋糕</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">eatCake</span><span class="hljs-params">()</span> &#123;<br><br><br>        <span class="hljs-comment">//定义标志位</span><br>        lock.lock();<br>        <span class="hljs-keyword">try</span> &#123;<br>            <span class="hljs-keyword">while</span> (<span class="hljs-built_in">this</span>.getNum() == <span class="hljs-number">0</span>) &#123;<br>                condition.await();<br>            &#125;<br>            System.out.println(<span class="hljs-string">&quot;---------开始吃蛋糕----------&quot;</span>);<br>            num--;<br>            System.out.println(Thread.currentThread().getName() + <span class="hljs-string">&quot;\t&quot;</span> + <span class="hljs-string">&quot;在吃蛋糕,还剩&quot;</span> + num + <span class="hljs-string">&quot;块&quot;</span>);<br>            condition.signalAll();<br>        &#125; <span class="hljs-keyword">catch</span> (InterruptedException e) &#123;<br>            e.printStackTrace();<br>        &#125; <span class="hljs-keyword">finally</span> &#123;<br>            lock.unlock();<br>        &#125;<br><br><br><br>    &#125;<br><br>    <span class="hljs-comment">//制作蛋糕</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">makeCake</span><span class="hljs-params">()</span> &#123;<br>        lock.lock();<br>        <span class="hljs-keyword">try</span> &#123;<br>            <span class="hljs-comment">//定义标志位</span><br>            <span class="hljs-keyword">while</span> (<span class="hljs-built_in">this</span>.getNum() != <span class="hljs-number">0</span>) &#123;<br>                condition.await();<br>            &#125;<br>            System.out.println(<span class="hljs-string">&quot;---------开始做蛋糕----------&quot;</span>);<br>            num++;<br>            System.out.println(Thread.currentThread().getName() + <span class="hljs-string">&quot;\t&quot;</span> + <span class="hljs-string">&quot;在做蛋糕,还剩&quot;</span> + num + <span class="hljs-string">&quot;块&quot;</span>);<br>            condition.signalAll();<br>        &#125; <span class="hljs-keyword">catch</span> (InterruptedException e) &#123;<br>            e.printStackTrace();<br>        &#125; <span class="hljs-keyword">finally</span> &#123;<br>            lock.unlock();<br>        &#125;<br>    &#125;<br><br><br>    <span class="hljs-keyword">public</span> Integer <span class="hljs-title function_">getNum</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.num;<br>    &#125;<br>&#125;<br><br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">EatCakeDemo</span> &#123;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> InterruptedException &#123;<br><br>        <span class="hljs-type">Cake</span> <span class="hljs-variable">cake</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Cake</span>();<br>        <span class="hljs-comment">//定义消费者和生产者</span><br><br><br><br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) &#123;<br>                <span class="hljs-keyword">new</span> <span class="hljs-title class_">Thread</span>(() -&gt; &#123;<br>                    cake.makeCake();<br>                &#125;, <span class="hljs-string">&quot;生产者&quot;</span>+String.valueOf(i)).start();<br>            &#125;<br><br><br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) &#123;<br>                <span class="hljs-keyword">new</span> <span class="hljs-title class_">Thread</span>(() -&gt; &#123;<br>                  cake.eatCake();<br><br>                &#125;, <span class="hljs-string">&quot;消费者&quot;</span>+String.valueOf(i)).start();<br><br><br>            &#125;<br>        TimeUnit.SECONDS.sleep(<span class="hljs-number">6</span>);<br><br>        System.out.println(<span class="hljs-string">&quot;结束了&quot;</span>);<br>    &#125;<br><br>&#125;<br><br></code></pre></td></tr></table></figure>
-
-
+<h1 id="RocektMq"><a href="#RocektMq" class="headerlink" title="RocektMq"></a>RocektMq</h1></blockquote>
+<h1 id="1-架构"><a href="#1-架构" class="headerlink" title="1:架构"></a>1:架构</h1><h2 id="1-1消费端与客户端"><a href="#1-1消费端与客户端" class="headerlink" title="1.1消费端与客户端"></a>1.1消费端与客户端</h2><h2 id="1-2消息代理Boker"><a href="#1-2消息代理Boker" class="headerlink" title="1.2消息代理Boker"></a>1.2消息代理Boker</h2><h2 id="1-3NameServer"><a href="#1-3NameServer" class="headerlink" title="1.3NameServer"></a>1.3NameServer</h2>
                 
               </div>
             
@@ -322,7 +320,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">#多线程</a>
+        <a href="/tags/rocektMq/">#rocektMq</a>
       
     </div>
   
@@ -334,8 +332,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>生产者和消费者</div>
-      <div>http://example.com/2022/10/30/202210/生产者和消费者/</div>
+      <div>rocektMq</div>
+      <div>http://example.com/2022/11/01/202211/RocektMQ/</div>
     </div>
     <div class="license-meta">
       
@@ -347,7 +345,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年10月30日</div>
+          <div>2022年11月1日</div>
         </div>
       
       
@@ -379,18 +377,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/10/31/202210/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/" title="消息中间件">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">消息中间件</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/10/29/202210/java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/" title="java并发编程">
-                        <span class="hidden-mobile">java并发编程</span>
+                      <a href="/2022/10/31/202210/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/" title="消息中间件">
+                        <span class="hidden-mobile">消息中间件</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -403,7 +395,7 @@
             
   <article id="comments" lazyload>
     
-  <div id="SOHUCS" sid='http://example.com/2022/10/30/202210/%E7%94%9F%E4%BA%A7%E8%80%85%E5%92%8C%E6%B6%88%E8%B4%B9%E8%80%85/'></div>
+  <div id="SOHUCS" sid='http://example.com/2022/11/01/202211/RocektMQ/'></div>
   <script type="text/javascript">
     Fluid.utils.loadComments('#SOHUCS', function() {
       Fluid.utils.createScript("https://changyan.sohu.com/upload/changyan.js", function() {
