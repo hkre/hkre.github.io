@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>微服务架构</title>
+    <link href="/2022/11/02/202211/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/"/>
+    <url>/2022/11/02/202211/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/</url>
+    
+    <content type="html"><![CDATA[<blockquote><h1 id="微服务架构"><a href="#微服务架构" class="headerlink" title="微服务架构"></a>微服务架构</h1></blockquote><h1 id="1-微服务架构图"><a href="#1-微服务架构图" class="headerlink" title="1:微服务架构图"></a>1:微服务架构图</h1><h3 id="1-1微服务划分"><a href="#1-1微服务划分" class="headerlink" title="1.1微服务划分"></a>1.1微服务划分</h3><h3 id="1-2集群-amp-分布式-amp-节点"><a href="#1-2集群-amp-分布式-amp-节点" class="headerlink" title="1.2集群&amp;分布式&amp;节点"></a>1.2集群&amp;分布式&amp;节点</h3><h3 id="1-3远程调用"><a href="#1-3远程调用" class="headerlink" title="1.3远程调用"></a>1.3远程调用</h3><h3 id="1-4负责均衡"><a href="#1-4负责均衡" class="headerlink" title="1.4负责均衡"></a>1.4负责均衡</h3><h3 id="1-5服务注册、配置中心"><a href="#1-5服务注册、配置中心" class="headerlink" title="1.5服务注册、配置中心"></a>1.5服务注册、配置中心</h3><h3 id="1-6服务熔断"><a href="#1-6服务熔断" class="headerlink" title="1.6服务熔断"></a>1.6服务熔断</h3><h3 id="1-7网关"><a href="#1-7网关" class="headerlink" title="1.7网关"></a>1.7网关</h3>]]></content>
+    
+    
+    <categories>
+      
+      <category>微服务</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>微服务架构</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>rocektMq</title>
     <link href="/2022/11/01/202211/RocektMQ/"/>
     <url>/2022/11/01/202211/RocektMQ/</url>
