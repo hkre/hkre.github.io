@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>redis</title>
+    <link href="/2022/11/04/202211/Redis/"/>
+    <url>/2022/11/04/202211/Redis/</url>
+    
+    <content type="html"><![CDATA[<blockquote><h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1></blockquote><h1 id="1-redis安装"><a href="#1-redis安装" class="headerlink" title="1.redis安装"></a>1.redis安装</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>缓存</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>redis</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>docker容器</title>
     <link href="/2022/11/03/202211/docker%E5%AE%B9%E5%99%A8/"/>
     <url>/2022/11/03/202211/docker%E5%AE%B9%E5%99%A8/</url>
