@@ -4,11 +4,74 @@
   
   
   <entry>
+    <title>git指令大全</title>
+    <link href="/2023/05/25/202305/git%E6%8C%87%E4%BB%A4%E5%A4%A7%E5%85%A8/"/>
+    <url>/2023/05/25/202305/git%E6%8C%87%E4%BB%A4%E5%A4%A7%E5%85%A8/</url>
+    
+    <content type="html"><![CDATA[<blockquote><h1 id="git指令大全"><a href="#git指令大全" class="headerlink" title="git指令大全"></a>git指令大全</h1></blockquote><table><thead><tr><th>指令名称</th><th>指令描述</th></tr></thead><tbody><tr><td>git init</td><td>&#x2F;&#x2F; 初始化 在工作路径上创建主分支</td></tr><tr><td>git clone</td><td>地址 &#x2F;&#x2F; 克隆远程仓库</td></tr><tr><td>git clone -b</td><td>分支名 地址 &#x2F;&#x2F; 克隆分支的代码到本地</td></tr><tr><td>git status</td><td>查看状态</td></tr><tr><td>git add</td><td>&#x2F;&#x2F; 将所有文件提交到暂存区</td></tr><tr><td>git checkout – file</td><td>&#x2F;&#x2F; 撤销工作区的修改</td></tr><tr><td>git add b c</td><td>&#x2F;&#x2F;把b和c存入暂存区</td></tr><tr><td>git add -p</td><td>&#x2F;&#x2F; 一个文件分多次提交</td></tr><tr><td>git stash -u -k</td><td>提交部分文件内容 到仓库 例如本地有3个文件 a b c 只想提交a b到远程仓库</td></tr><tr><td>git commit -am</td><td>&#x2F;&#x2F; 提交到仓库</td></tr><tr><td>git branch -d</td><td>删除分支</td></tr><tr><td>git branch -d</td><td>origin&#x2F;远程分支名x</td></tr><tr><td>git merge –abort</td><td>取消合并</td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr><tr><td></td><td></td></tr></tbody></table>]]></content>
+    
+    
+    <categories>
+      
+      <category>git指令大全</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>git指令大全</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2023/02/24/202302/23/"/>
+    <url>/2023/02/24/202302/23/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>极限的定义与性质</title>
+    <link href="/2023/02/24/202302/%E6%9E%81%E9%99%90%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E6%80%A7%E8%B4%A8/"/>
+    <url>/2023/02/24/202302/%E6%9E%81%E9%99%90%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E6%80%A7%E8%B4%A8/</url>
+    
+    <content type="html"><![CDATA[<blockquote><h1 id="极限的定义与性质"><a href="#极限的定义与性质" class="headerlink" title="极限的定义与性质"></a>极限的定义与性质</h1></blockquote><h1 id="1-数列的极限"><a href="#1-数列的极限" class="headerlink" title="1:数列的极限"></a>1:数列的极限</h1><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs excel"><span class="hljs-symbol">1:</span>对于任意的一个数K大于<span class="hljs-number">0</span>，存在<span class="hljs-built_in">N</span>,<span class="hljs-built_in">n</span>&gt;<span class="hljs-built_in">N</span>,|x-A| &lt; k<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>极限的定义与性质</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>极限的定义与性质</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>考研英语必考前缀</title>
     <link href="/2023/02/22/202302/%E8%80%83%E7%A0%94%E8%8B%B1%E8%AF%AD%E5%BF%85%E8%80%83%E5%89%8D%E7%BC%80/"/>
     <url>/2023/02/22/202302/%E8%80%83%E7%A0%94%E8%8B%B1%E8%AF%AD%E5%BF%85%E8%80%83%E5%89%8D%E7%BC%80/</url>
     
-    <content type="html"><![CDATA[<blockquote><h1 id="考研英语必考前缀"><a href="#考研英语必考前缀" class="headerlink" title="考研英语必考前缀"></a>考研英语必考前缀</h1></blockquote><h1 id="1-表示否定"><a href="#1-表示否定" class="headerlink" title="1:表示否定"></a>1:表示否定</h1><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stata">1: a <span class="hljs-keyword">an</span> ab <span class="hljs-keyword">de</span> <span class="hljs-keyword">dis</span> im il <span class="hljs-keyword">in</span> non neg  un <br></code></pre></td></tr></table></figure><h1 id="2-表示错误"><a href="#2-表示错误" class="headerlink" title="2:表示错误"></a>2:表示错误</h1>]]></content>
+    <content type="html"><![CDATA[<blockquote><h1 id="考研英语必考前缀"><a href="#考研英语必考前缀" class="headerlink" title="考研英语必考前缀"></a>考研英语必考前缀</h1></blockquote><h1 id="1-表示否定"><a href="#1-表示否定" class="headerlink" title="1:表示否定"></a>1:表示否定</h1><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stata">1: a <span class="hljs-keyword">an</span> ab <span class="hljs-keyword">de</span> <span class="hljs-keyword">dis</span> im il <span class="hljs-keyword">in</span> non neg  un <br></code></pre></td></tr></table></figure><h1 id="2-表示错误"><a href="#2-表示错误" class="headerlink" title="2:表示错误"></a>2:表示错误</h1><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs elixir"><span class="hljs-number">1</span><span class="hljs-symbol">:mal</span> mis de <br></code></pre></td></tr></table></figure><h1 id="3-表示相反"><a href="#3-表示相反" class="headerlink" title="3:表示相反"></a>3:表示相反</h1><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs actionscript"><span class="hljs-number">1</span>：anti contra counter contro opppse ob <span class="hljs-keyword">with</span> re<br></code></pre></td></tr></table></figure><h1 id="4-表示空间的前缀"><a href="#4-表示空间的前缀" class="headerlink" title="4:表示空间的前缀"></a>4:表示空间的前缀</h1><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ruby"><span class="hljs-number">1</span><span class="hljs-symbol">:a</span> over <span class="hljs-variable language_">super</span> sur mid medi med de under sub infer infra <br></code></pre></td></tr></table></figure><h1 id="5-表示前后"><a href="#5-表示前后" class="headerlink" title="5:表示前后"></a>5:表示前后</h1><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stata">1:fore <span class="hljs-keyword">for</span> pre <span class="hljs-keyword">pro</span> <span class="hljs-keyword">post</span> re retro<br></code></pre></td></tr></table></figure><h1 id="6-表示内外"><a href="#6-表示内外" class="headerlink" title="6:表示内外"></a>6:表示内外</h1><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vim"><span class="hljs-number">1</span>:in intron <span class="hljs-keyword">il</span> ir <span class="hljs-keyword">ex</span> <span class="hljs-keyword">ec</span> <span class="hljs-keyword">ec</span> out <br></code></pre></td></tr></table></figure><h1 id="7-表示聚散离合"><a href="#7-表示聚散离合" class="headerlink" title="7:表示聚散离合"></a>7:表示聚散离合</h1><figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs q"><span class="hljs-number">1</span>:con col syn sym <span class="hljs-keyword">by</span> cricum circu circ <span class="hljs-built_in">inter</span> trans across <span class="hljs-built_in">over</span> super <br></code></pre></td></tr></table></figure><h1 id="8-表示时间、顺序"><a href="#8-表示时间、顺序" class="headerlink" title="8:表示时间、顺序"></a>8:表示时间、顺序</h1><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stata">1:anti pre <span class="hljs-keyword">pro</span> <span class="hljs-keyword">ex</span> <span class="hljs-keyword">post</span> re <br></code></pre></td></tr></table></figure><h1 id="9-表示比较、程度"><a href="#9-表示比较、程度" class="headerlink" title="9:表示比较、程度"></a>9:表示比较、程度</h1><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs applescript"><span class="hljs-number">1</span>:<span class="hljs-keyword">by</span> hyper <span class="hljs-keyword">over</span> super hypo sub sue sur vic ultra<br></code></pre></td></tr></table></figure><h1 id="10-必考前缀"><a href="#10-必考前缀" class="headerlink" title="10:必考前缀"></a>10:必考前缀</h1><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs applescript"><span class="hljs-number">1</span>:mono uni un multi pan cyber eco para epi <span class="hljs-keyword">over</span> <br></code></pre></td></tr></table></figure>]]></content>
     
     
     <categories>
@@ -2300,7 +2363,7 @@
     <link href="/2022/10/25/%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/"/>
     <url>/2022/10/25/%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</url>
     
-    <content type="html"><![CDATA[<table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>图床</td><td><a href="https://www.superbed.cn/timeline">https://www.superbed.cn/timeline</a></td></tr><tr><td>github账号</td><td><a href="mailto:&#50;&#x34;&#x38;&#x36;&#x31;&#49;&#56;&#x36;&#x32;&#x37;&#x40;&#113;&#x71;&#x2e;&#99;&#111;&#109;">&#50;&#x34;&#x38;&#x36;&#x31;&#49;&#56;&#x36;&#x32;&#x37;&#x40;&#113;&#x71;&#x2e;&#99;&#111;&#109;</a></td></tr><tr><td>github密码</td><td>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</td></tr><tr><td>github密码</td><td>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</td></tr><tr><td></td><td>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</td></tr></tbody></table><p>idea jrebel 破解：</p><p><a href="https://www.cnblogs.com/emmetyang/p/16443766.html">https://www.cnblogs.com/emmetyang/p/16443766.html</a></p>]]></content>
+    <content type="html"><![CDATA[<table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td>图床</td><td><a href="https://www.superbed.cn/timeline">https://www.superbed.cn/timeline</a></td></tr><tr><td>github账号</td><td><a href="mailto:&#50;&#x34;&#x38;&#54;&#49;&#x31;&#56;&#54;&#50;&#55;&#x40;&#x71;&#x71;&#46;&#x63;&#111;&#109;">&#50;&#x34;&#x38;&#54;&#49;&#x31;&#56;&#54;&#50;&#55;&#x40;&#x71;&#x71;&#46;&#x63;&#111;&#109;</a></td></tr><tr><td>github密码</td><td>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</td></tr><tr><td>github密码</td><td>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</td></tr><tr><td></td><td>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</td></tr></tbody></table><p>idea jrebel 破解：</p><p><a href="https://www.cnblogs.com/emmetyang/p/16443766.html">https://www.cnblogs.com/emmetyang/p/16443766.html</a></p>]]></content>
     
     
     <categories>
